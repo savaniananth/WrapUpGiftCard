@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIP-UP GIFT BOXES</title>
+    <link rel="stylesheet" href="style.css"-->
+    <script>
+        function generate(){
+    const num = document.getElementById('number').value;
+    for(let i=1;i<=num;i++){
+        const parent1 = document.getElementById("output");
+        const child1 = document.createElement("div");
+        child1.setAttribute("class","gift");
+        child1.innerHTML = i;
+        parent1.appendChild(child1);
+    }
+}
+    </script>
+</head>
+<body>
+    <div class="title center">
+        >
+        <div class="input_box center">
+            <h1 class="text-size">Whip-Up Gift Boxes</h1>
+                <input type="text" id="number" placeholder="Enter the no of gifts to generate">
+                <button type="submit" id="generate" class="generate_button" onclick=generate()>Generate</button>
+                <h5>Generated gifts</h5>
+            <div id="output">
+               
+            </div>
+        </div>
+    </div>
+</body>
